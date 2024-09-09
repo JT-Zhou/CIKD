@@ -1,0 +1,22 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "kd_N,vgg13_vgg8_l8"
+  PROJECT: "cifar100_KD_IAT"
+DISTILLER:
+  TYPE: "KD_"
+  TEACHER: "vgg13"
+  STUDENT: "vgg8"
+SOLVER:
+  BATCH_SIZE: 128
+  EPOCHS: 240
+  LR: 0.05
+  LR_DECAY_STAGES: [150, 180, 210]
+  LR_DECAY_RATE: 0.1
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+KD_:
+  A: 1
+  B: 8
+  C: 1.0
+

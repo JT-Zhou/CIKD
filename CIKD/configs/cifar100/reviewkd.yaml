@@ -1,0 +1,21 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "reviewkd_V,wrn_40_2,shuv2"
+  PROJECT: "cifar100_baselines"
+DISTILLER:
+  TYPE: "IAKD"
+  TEACHER: "resnet32x4"
+  STUDENT: "resnet8x4"
+REVIEWKD:
+  REVIEWKD_WEIGHT: 5.0
+
+SOLVER:
+  BATCH_SIZE: 128
+  EPOCHS: 240
+  LR: 0.05
+  LR_DECAY_STAGES: [150, 180, 210]
+  LR_DECAY_RATE: 0.1
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+

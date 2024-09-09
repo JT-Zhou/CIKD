@@ -1,0 +1,22 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "kd_N,wrn_40_2,wrn_16_2_l8"
+  PROJECT: "cifar100_KD_IAT"
+DISTILLER:
+  TYPE: "KD_"
+  TEACHER: "wrn_40_2"
+  STUDENT: "wrn_16_2"
+SOLVER:
+  BATCH_SIZE: 64
+  EPOCHS: 240
+  LR: 0.05
+  LR_DECAY_STAGES: [150, 180, 210]
+  LR_DECAY_RATE: 0.1
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+KD_:
+  A: 8
+  B: 1
+  C: 1.0
+

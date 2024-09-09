@@ -1,0 +1,19 @@
+EXPERIMENT:
+  NAME: ""
+  TAG: "kd_M,vgg13,wrn_40_2,vgg8,"
+  PROJECT: "cifar100_baselines"
+DISTILLER:
+  TYPE: "KD_M"
+  TEACHER: "vgg13"
+  TEACHER2: "wrn_40_2"
+  STUDENT: "vgg8"
+SOLVER:
+  BATCH_SIZE: 64
+  EPOCHS: 240
+  LR: 0.05
+  LR_DECAY_STAGES: [150, 180, 210]
+  LR_DECAY_RATE: 0.1
+  WEIGHT_DECAY: 0.0005
+  MOMENTUM: 0.9
+  TYPE: "SGD"
+
